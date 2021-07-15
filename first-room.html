@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Room First Room</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!--Link our style sheet.-->
+    <link type="text/css" rel="stylesheet" href="css/igem-style.css">
+
+</head>
+
+
+<body data-barba="wrapper">
+
+    <main data-barba="container" data-barba-namespace="home">
+
+        <img src="images/image-2.jpg">
+
+        <h1 class="transition-element">ABOUT</h1>
+        <div class="cnt-first-room">
+            <div class="cnt-triangle-ans-flex">
+
+                <div class="arrow-triangle-flex">
+                    <div id="arrowAnim">
+
+                        <div class="arrowSliding delay1">
+                          <div class="arrow"></div>
+                        </div>
+                        <div class="arrowSliding delay2">
+                          <div class="arrow"></div>
+                        </div>
+                        <div class="arrowSliding delay3">
+                          <div class="arrow"></div>
+                        </div>
+                      </div>
+                </div>
+
+
+                <div class=" triangle">
+                    <div class="top">Layer 1</div>
+                    <div class="mid">Layer 2</div>
+                    <div class="bottom"> Layer 3</div>
+                    <div class="mid">Layer 4</div>
+                    <div class="mid">Layer 5</div>
+                    <div class="mid">Layer 6</div>
+                    <div class="mid">Layer 7</div>
+                    <div class="mid">Layer 8</div>
+                </div>
+
+                <div class="triangle-ans">
+                    <div id="l1" ondrop="drop(event)" ondragover="allowDrop(event)"> <!-- Layer 1 -->
+
+                    </div>
+                    <div id="l2" ondrop="drop(event)" ondragover="allowDrop(event)"> <!-- Layer 2 -->
+
+                    </div>
+                    <div id="l3" ondrop="drop(event)" ondragover="allowDrop(event)"><!-- Layer 3 -->
+                        <div>
+
+                        </div>
+                        <div>
+
+                        </div>
+                        <div>
+
+                        </div>
+                        <div>
+
+                        </div>
+                    </div>
+                    <div id="l4" ondrop="drop(event)" ondragover="allowDrop(event)"><!-- Layer 4 -->
+                        <div>
+
+                        </div>
+                        <div>
+
+                        </div>
+                        <div>
+
+                        </div>
+                        <div>
+
+                        </div>
+                    </div>
+                    <div id="l5" ondrop="drop(event)" ondragover="allowDrop(event)"><!-- Layer 5 -->
+                        <div>
+
+                        </div>
+                        <div>
+
+                        </div>
+                        <div>
+
+                        </div>
+                        <div>
+
+                        </div>
+                    </div>
+                    <div id="l6" ondrop="drop(event)" ondragover="allowDrop(event)"><!-- Layer 6 -->
+                        <div>
+
+                        </div>
+                        <div>
+
+                        </div>
+                        <div>
+
+                        </div>
+                        <div>
+
+                        </div>
+                    </div>
+                    <div id="l7" ondrop="drop(event)" ondragover="allowDrop(event)"><!-- Layer 7 -->
+                        <div>
+
+                        </div>
+                        <div>
+
+                        </div>
+                        <div>
+
+                        </div>
+                        <div>
+
+                        </div>
+                    </div>
+                    <div id="l8" ondrop="drop(event)" ondragover="allowDrop(event)"> <!-- Layer 8 -->
+                        <div>
+                            <img class="draggable-img display-none" id="petalouda" src="images/fly-thessaly-logo .png">
+                        </div>
+                        <div>
+                            <img class="draggable-img display-none drag2" src="images/fly-thessaly-logo .png">
+                        </div>
+                        <div>
+                            <img class="draggable-img display-none drag3" src="images/fly-thessaly-logo .png">
+                        </div>
+                        <div>
+                            <img class="draggable-img display-none drag4" src="images/fly-thessaly-logo .png">
+                        </div> 
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="game-images transition-element" >
+                <div ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img class=" draggable-img" id="drag1" src="images/fly-thessaly-logo .png" draggable="true"  ondragstart="drag(event)">
+                </div>
+                <div ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img class="draggable-img" id="drag2" src="images/fly-thessaly-logo .png" draggable="true"  ondragstart="drag(event)">
+                </div>
+                <div ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img class="draggable-img" id="drag3" src="images/fly-thessaly-logo .png" draggable="true"  ondragstart="drag(event)">
+                </div>
+                <div ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img class="draggable-img" id="drag4" src="images/fly-thessaly-logo .png"  draggable="true" ondragstart="drag(event)">
+                </div>
+            </div>
+        </div>
+        
+        <a href="second-room.html" onclick="CheckFirstRoom()" class="transition-element trans-btn">go to <strong>second room</strong></a>
+
+    </main>
+
+   
+    <div class="transition-container">
+        <span id="from-top"></span>
+        <span id="from-bottom"></span>
+    </div>
+
+
+    <script src="libs/barba.min.js"></script>
+    <script src="libs/gsap.min.js"></script>
+    <script src="js/script.js"></script>
+    
+    <script>
+        function allowDrop(ev) {
+        ev.preventDefault();
+        }
+    
+        function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+        }
+    
+        function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
+
+    <script src="js/first-room.js"></script>
+</body>
+
+
+</html>
