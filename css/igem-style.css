@@ -333,7 +333,7 @@ body{
 
   .triangle-ct-v2{
       width: 100%;
-      height: 65%;
+      max-height: 65%;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -393,6 +393,10 @@ body{
       background: white;
       margin: 10px;
       z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
   }
 
   .food-img-ct img{
@@ -508,16 +512,17 @@ body{
   margin-top: 0.5rem;
 }
 .droppable.dropped img {
-    height: 4rem;
-    width: 4rem;
+    height: 3rem;
+    width: 3rem;
     pointer-events: none;
     opacity: 1;
-    z-index: 10;
+    z-index: 10 !important;
+    position: relative;
     
   }
 .draggable.dragged {
   user-select: none;
-  opacity: 0.1;
+  opacity: 0.1 !important;
   cursor: default;
 }
 .draggable.dragged:hover {
@@ -527,4 +532,16 @@ body{
 @media (max-width: 600px) {
   html { font-size: 14px; }
   .draggable-elements { margin: 1.5rem; }
+}
+
+.test{
+    position: absolute;
+    width: 100vw;
+    height: 50%;
+    bottom: -50%;
+}
+
+.test img{
+    width: 100%;
+    height: 100%;
 }
