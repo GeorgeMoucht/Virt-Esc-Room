@@ -42,6 +42,8 @@ function dragLeave(event) {
   }
 }
 
+var validator = 0;
+
 function drop(event) {
   event.preventDefault(); // This is in order to prevent the browser default handling of the data
   event.target.classList.remove("droppable-hover");
@@ -49,6 +51,7 @@ function drop(event) {
   const droppableElementData = event.target.getAttribute("data-draggable-id");
   const isCorrectMatching = draggableElementData === droppableElementData;
   if(isCorrectMatching) {
+    validator++;
     const draggableElement = document.getElementById(draggableElementData);
     event.target.classList.add("dropped");
     // event.target.style.backgroundColor = draggableElement.style.color; // This approach works only for inline styles. A more general approach would be the following: 
@@ -56,5 +59,9 @@ function drop(event) {
     draggableElement.classList.add("dragged");
     draggableElement.setAttribute("draggable", "false");
     event.target.insertAdjacentHTML("afterbegin", `<img src=${draggableElement.src} alt=${draggableElement.alt}>`);
+  }
+  if (validator === 1){
+    document.getElementById("NextLevel").style.display = "block";
+
   }
 }
