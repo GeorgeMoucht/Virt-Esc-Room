@@ -1,44 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index of Virtual Room game</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/igem-style.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Index of Virtual Room game</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
 
-    <!--Google Fonts lib  Raleway-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
-</head>
+        <!--Google Fonts lib  Raleway-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
 
-<body data-barba="wrapper">
+    </head>
 
+    <body>
 
-    <main data-barba="container" data-barba-namespace="home">
+        <div class="main">
 
-        <img src="images/image-1.jpg">
-        <h2 class="about-game-title transition-element">Instructions</h2>
-        <div class="about-the-par transition-element" style="padding-top: 1rem; padding-bottom: 1rem;">
-            <iframe width="500" height="500" style="background-color:white; padding:5px 0px 0 5px; border:3px solid black; margin:auto; display:block" frameborder="0" src="https://crosswordlabs.com/embed/country-270"></iframe>
+            <!-- Background Image -->
+            
+            <h1>Crossword</h1>
 
+            <div class="second-game-ct">
+                <div class="about-the-par transition-element" >
+                    <iframe width="700" height="500" style="background-color:white;  border:3px solid black; margin:auto;" frameborder="0" src="https://crosswordlabs.com/embed/country-270"></iframe>
+                </div>
+            </div>
+
+            <div class="transition-element-ct">
+                <a href="third-room.html" class="transition-element"> <strong>Next Level</strong></a>
+
+            </div>
         </div>
-        <h1 class="transition-element strt-game">Start the game</h1>
-        <a href="third-room.html" class="transition-element"> <strong>Go to third room</strong></a>
 
-    </main>
-
-    <div class="transition-container">
-        <span id="from-top"></span>
-        <span id="from-bottom"></span>
-    </div>
-
-
-    <script src="libs/barba.min.js"></script>
-    <script src="libs/gsap.min.js"></script>
-    <script src="js/script.js"></script>
-</body>
-
+    </body>
 </html>

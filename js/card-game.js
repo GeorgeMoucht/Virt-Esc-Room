@@ -31,7 +31,7 @@ function checkForMatch() {
   if(isMatch){
     validator++;
     if (validator === 1){
-      document.getElementById("NextLevel").style.display = "block";
+      document.getElementById("NextLevel").style.opacity = "1";
 
     }
   }

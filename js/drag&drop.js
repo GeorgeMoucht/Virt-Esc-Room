@@ -61,7 +61,7 @@ function drop(event) {
     event.target.insertAdjacentHTML("afterbegin", `<img src=${draggableElement.src} alt=${draggableElement.alt}>`);
   }
   if (validator === 1){
-    document.getElementById("NextLevel").style.display = "block";
+    document.getElementById("NextLevel").style.opacity = "1";
 
   }
 }
