@@ -12,8 +12,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+
 </head>
 
+<style>
+  *{
+    opacity: 1 !important;
+  }
+
+  #NextLevel{
+    display: none;
+  }
+
+  .about-the-par{
+    height: 53%;
+  }
+</style>
 <body data-barba="wrapper">
 
 
@@ -22,20 +36,82 @@
         <img src="images/image-1.jpg">
         <h2 class="about-game-title transition-element">Instructions</h2>
         <div class="about-the-par transition-element">
-            <div class="flip-box">
-                <div class="flip-box-inner">
-                  <div class="flip-box-front">
-                    <img src="images/img_paris.jpg" alt="Paris" style="width:300px;height:200px">
-                  </div>
-                  <div class="flip-box-back">
-                    <h2>Paris</h2>
-                    <p>What an amazing city</p>
-                  </div>
-                </div>
-              </div>
+          <section class="memory-game">
+            <div class="memory-card" data-framework="aurelia">
+              <img class="front-face" src="images/icons8-meat-64.png" alt="Aurelia" />
+              <img class="back-face" src="images/fly-thessaly-logo .png" alt="JS Badge" />
+            </div>
+            <div class="memory-card" data-framework="aurelia">
+              <img class="front-face" src="img/aurelia.svg" alt="Aurelia" />
+              <img class="back-face" src="images/fly-thessaly-logo .png" alt="JS Badge" />
+              <div class="front-face">To ederiko mikrovioma einai polu kalo</div>
+            </div>
+        
+            <div class="memory-card" data-framework="vue">
+              <img class="front-face" src="img/vue.svg" alt="Vue" />
+              <img class="back-face" src="images/fly-thessaly-logo .png" alt="JS Badge" />
+            </div>
+            <div class="memory-card" data-framework="vue">
+              <img class="front-face" src="img/vue.svg" alt="Vue" />
+              <img class="back-face" src="images/fly-thessaly-logo .png" alt="JS Badge" />
+            </div>
+        
+            <div class="memory-card" data-framework="angular">
+              <img class="front-face" src="img/angular.svg" alt="Angular" />
+              <img class="back-face" src="images/fly-thessaly-logo .png" alt="JS Badge" />
+            </div>
+            <div class="memory-card" data-framework="angular">
+              <img class="front-face" src="img/angular.svg" alt="Angular" />
+              <img class="back-face" src="images/fly-thessaly-logo .png" alt="JS Badge" />
+            </div>
+        
+            <div class="memory-card" data-framework="ember">
+              <img class="front-face" src="img/ember.svg" alt="Ember" />
+              <img class="back-face" src="images/fly-thessaly-logo .png" alt="JS Badge" />
+            </div>
+            <div class="memory-card" data-framework="ember">
+              <img class="front-face" src="img/ember.svg" alt="Ember" />
+              <img class="back-face" src="images/fly-thessaly-logo .png" alt="JS Badge" />
+            </div>
+        
+            <div class="memory-card" data-framework="backbone">
+              <img class="front-face" src="img/backbone.svg" alt="Backbone" />
+              <img class="back-face" src="images/fly-thessaly-logo .png" alt="JS Badge" />
+            </div>
+            <div class="memory-card" data-framework="backbone">
+              <img class="front-face" src="img/backbone.svg" alt="Backbone" />
+              <img class="back-face" src="images/fly-thessaly-logo .png" alt="JS Badge" />
+            </div>
+        
+            <div class="memory-card" data-framework="react">
+              <img class="front-face" src="img/react.svg" alt="React" />
+              <img class="back-face" src="images/fly-thessaly-logo .png" alt="JS Badge" />
+            </div>
+            <div class="memory-card" data-framework="react">
+              <img class="front-face" src="img/react.svg" alt="React" />
+              <img class="back-face" src="images/fly-thessaly-logo .png" alt="JS Badge" />
+            </div>
+            <div class="memory-card" data-framework="backbone">
+              <img class="front-face" src="img/backbone.svg" alt="Backbone" />
+              <img class="back-face" src="images/fly-thessaly-logo .png" alt="JS Badge" />
+            </div>
+            <div class="memory-card" data-framework="backbone">
+              <img class="front-face" src="img/backbone.svg" alt="Backbone" />
+              <img class="back-face" src="images/fly-thessaly-logo .png" alt="JS Badge" />
+            </div>
+        
+            <div class="memory-card" data-framework="react">
+              <img class="front-face" src="img/react.svg" alt="React" />
+              <img class="back-face" src="images/fly-thessaly-logo .png" alt="JS Badge" />
+            </div>
+            <div class="memory-card" data-framework="react">
+              <img class="front-face" src="img/react.svg" alt="React" />
+              <img class="back-face" src="images/fly-thessaly-logo .png" alt="JS Badge" />
+            </div>
+          </section>
         </div>
         <h1 class="transition-element strt-game">Start the game</h1>
-        <a href="first-room.html" class="transition-element"> <strong>Start the game</strong></a>
+        <a href="first-room.html" id="NextLevel" class="transition-element"> <strong>Start the game</strong></a>
 
     </main>
 
@@ -48,6 +124,7 @@
     <script src="libs/barba.min.js"></script>
     <script src="libs/gsap.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/card-game.js"></script>
 </body>
 
 </html>
